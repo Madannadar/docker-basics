@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres # this image will be pulled from Docker Hub
+    ports: 
+      - "5432:5432" # maps the container's port 5432 to the host's port 5432
+    environment:
+      POSTGRES_USER: postgres # default user for PostgreSQL
+      POSTGRES_PASSWORD: postgres # default password for PostgreSQL
+      POSTGRES_DB: postgres # default database for PostgreSQL
+  
+  redis:
+    image: redis # this image will be pulled from Docker Hub
+    ports:
+      - "6379:6379" # maps the container's port 6379 to the host's port 6379
